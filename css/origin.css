@@ -1,0 +1,4542 @@
+@charset "UTF-8";
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* BASE - Unclassed HTML styles common to all our projects
+   ===========================================================================*/
+/* Local: base styles — copy file if implementing Origin into a project */
+/**
+ * Ensure an element’s width and height aren’t affected by padding or borders.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Ensure the root `font-size` is 100% of the browser default.
+ * 2. Ensure any background applied to this element will assume the full height
+ *    of the viewport.
+ */
+html {
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  height: 100%;
+}
+
+/**
+ * Ensure any background applied to this element will assume the full height
+ * of the viewport, and remove any default margin and padding.
+ */
+body {
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+/**
+ * Define our global `font-family`, `font-size`, `line-height`, and `color`
+ * values for all elements that require global targeting.
+ */
+
+input,
+textarea,
+keygen,
+select,
+button {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16 px;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #333;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* THE VERY BIG FAT CLEAR LINE */
+
+@charset "UTF-8";
+
+/* Utilities
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/background/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `background`
+   ========================================================================== */
+.u-background--inherit {
+  background: inherit !important;
+}
+
+.u-background--none {
+  background: none !important;
+}
+
+/* `background-color`
+   ========================================================================== */
+.u-background-color--alt {
+  background-color: #7cc04a !important;
+}
+
+.u-background-color--base {
+  background-color: #007abf !important;
+}
+
+.u-background-color--fa-amber {
+  background-color: #ff9302 !important;
+}
+
+.u-background-color--fa-amber--dark {
+  background-color: #ff7b05 !important;
+}
+
+.u-background-color--fa-blue {
+  background-color: #007abf !important;
+}
+
+.u-background-color--fa-blue--dark {
+  background-color: #0069ad !important;
+}
+
+.u-background-color--fa-blue--x-dark {
+  background-color: #005994 !important;
+}
+
+.u-background-color--fa-blue--xx-dark {
+  background-color: #004573 !important;
+}
+
+.u-background-color--fa-blue--x-light {
+  background-color: #e2eef5 !important;
+}
+
+.u-background-color--fa-blue--xx-light {
+  background-color: #f1f7fa !important;
+}
+
+.u-background-color--fa-green {
+  background-color: #7cc04a !important;
+}
+
+.u-background-color--fa-green--dark {
+  background-color: #6aac3a !important;
+}
+
+.u-background-color--fa-green--text {
+  background-color: #50b428 !important;
+}
+
+.u-background-color--fa-green--x-light {
+  background-color: #dfecd5 !important;
+}
+
+.u-background-color--fa-purple {
+  background-color: #76368e !important;
+}
+
+.u-background-color--fa-purple--x-light {
+  background-color: #ece4ef !important;
+}
+
+.u-background-color--fa-red {
+  background-color: #fd331d !important;
+}
+
+.u-background-color--fa-red--dark {
+  background-color: #de0918 !important;
+}
+
+.u-background-color--fa-red--text {
+  background-color: #e10b1a !important;
+}
+
+.u-background-color--fa-red--x-light {
+  background-color: #fee1dd !important;
+}
+
+.u-background-color--fa-yellow {
+  background-color: #ffb608 !important;
+}
+
+.u-background-color--fa-yellow--x-light {
+  background-color: #fff1cf !important;
+}
+
+.u-background-color--fa-white {
+  background-color: #fff !important;
+}
+
+.u-background-color--gray-1 {
+  background-color: #111 !important;
+}
+
+.u-background-color--gray-2 {
+  background-color: #222 !important;
+}
+
+.u-background-color--gray-3 {
+  background-color: #333 !important;
+}
+
+.u-background-color--gray-4 {
+  background-color: #444 !important;
+}
+
+.u-background-color--gray-5 {
+  background-color: #555 !important;
+}
+
+.u-background-color--gray-6 {
+  background-color: #666 !important;
+}
+
+.u-background-color--gray-7 {
+  background-color: #777 !important;
+}
+
+.u-background-color--gray-8 {
+  background-color: #888 !important;
+}
+
+.u-background-color--gray-9 {
+  background-color: #999 !important;
+}
+
+.u-background-color--gray-10 {
+  background-color: #aaa !important;
+}
+
+.u-background-color--gray-11 {
+  background-color: #bbb !important;
+}
+
+.u-background-color--gray-12 {
+  background-color: #ccc !important;
+}
+
+.u-background-color--gray-13 {
+  background-color: #ddd !important;
+}
+
+.u-background-color--gray-14 {
+  background-color: #e4e4e4 !important;
+}
+
+.u-background-color--gray-15 {
+  background-color: #eee !important;
+}
+
+.u-background-color--gray-16 {
+  background-color: #f5f5f5 !important;
+}
+
+.u-background-color--inherit {
+  background-color: inherit !important;
+}
+
+.u-background-color--inherit--active:active {
+  background-color: inherit !important;
+}
+
+.u-background-color--inherit--hover:hover {
+  background-color: inherit !important;
+}
+
+.u-background-color--transparent {
+  background-color: transparent !important;
+}
+
+.u-background-color--transparent--active:active {
+  background-color: transparent !important;
+}
+
+.u-background-color--transparent--hover:hover {
+  background-color: transparent !important;
+}
+
+/* `background-image`
+   ========================================================================== */
+.u-background-image--none {
+  background-image: none !important;
+}
+
+/* `background-position`
+   ========================================================================== */
+.u-background-position--center-bottom {
+  background-position: center bottom !important;
+}
+
+.u-background-position--center-center {
+  background-position: center center !important;
+}
+
+.u-background-position--center-top {
+  background-position: center top !important;
+}
+
+.u-background-position--left-bottom {
+  background-position: left bottom !important;
+}
+
+.u-background-position--left-center {
+  background-position: left center !important;
+}
+
+.u-background-position--left-top {
+  background-position: left top !important;
+}
+
+.u-background-position--right-bottom {
+  background-position: right bottom !important;
+}
+
+.u-background-position--right-center {
+  background-position: right center !important;
+}
+
+.u-background-position--right-top {
+  background-position: right top !important;
+}
+
+/* `background-size`
+   ========================================================================== */
+.u-background-size--contain {
+  background-size: contain !important;
+}
+
+.u-background-size--cover {
+  background-size: cover !important;
+}
+
+/* `border`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/border/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Mixin
+   ========================================================================== */
+/* Utility classes
+   ========================================================================== */
+.u-border--0 {
+  border: 0 !important;
+}
+
+.u-border-bottom--0 {
+  border-bottom: 0 !important;
+}
+
+.u-border-left--0 {
+  border-left: 0 !important;
+}
+
+.u-border-right--0 {
+  border-right: 0 !important;
+}
+
+.u-border-top--0 {
+  border-top: 0 !important;
+}
+
+.u-border--thin {
+  border: 0.5px !important;
+}
+
+.u-border-bottom--thin {
+  border-bottom: 0.5px !important;
+}
+
+.u-border-left--thin {
+  border-left: 0.5px !important;
+}
+
+.u-border-right--thin {
+  border-right: 0.5px !important;
+}
+
+.u-border-top--thin {
+  border-top: 0.5px !important;
+}
+
+.u-border--default {
+  border: 1px !important;
+}
+
+.u-border-bottom--default {
+  border-bottom: 1px !important;
+}
+
+.u-border-left--default {
+  border-left: 1px !important;
+}
+
+.u-border-right--default {
+  border-right: 1px !important;
+}
+
+.u-border-top--default {
+  border-top: 1px !important;
+}
+
+.u-border--thick {
+  border: 2px !important;
+}
+
+.u-border-bottom--thick {
+  border-bottom: 2px !important;
+}
+
+.u-border-left--thick {
+  border-left: 2px !important;
+}
+
+.u-border-right--thick {
+  border-right: 2px !important;
+}
+
+.u-border-top--thick {
+  border-top: 2px !important;
+}
+
+.u-border--x-thick {
+  border: 3px !important;
+}
+
+.u-border-bottom--x-thick {
+  border-bottom: 3px !important;
+}
+
+.u-border-left--x-thick {
+  border-left: 3px !important;
+}
+
+.u-border-right--x-thick {
+  border-right: 3px !important;
+}
+
+.u-border-top--x-thick {
+  border-top: 3px !important;
+}
+
+.u-border--xx-thick {
+  border: 4px !important;
+}
+
+.u-border-bottom--xx-thick {
+  border-bottom: 4px !important;
+}
+
+.u-border-left--xx-thick {
+  border-left: 4px !important;
+}
+
+.u-border-right--xx-thick {
+  border-right: 4px !important;
+}
+
+.u-border-top--xx-thick {
+  border-top: 4px !important;
+}
+
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/border-radius/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `border-radius`
+   ========================================================================== */
+.u-border-radius--0 {
+  border-radius: 0 !important;
+}
+
+.u-border-radius--small {
+  border-radius: 2px !important;
+}
+
+.u-border-radius--default {
+  border-radius: 4px !important;
+}
+
+.u-border-radius--large {
+  border-radius: 6px !important;
+}
+
+.u-border-radius--x-large {
+  border-radius: 8px !important;
+}
+
+.u-border-radius--xx-large {
+  border-radius: 10px !important;
+}
+
+/* `border-bottom-left-radius`
+   ========================================================================== */
+.u-border-radius-bottom-left--0 {
+  border-bottom-left-radius: 0 !important;
+}
+
+.u-border-radius-bottom-left--small {
+  border-bottom-left-radius: 2px !important;
+}
+
+.u-border-radius-bottom-left--default {
+  border-bottom-left-radius: 4px !important;
+}
+
+.u-border-radius-bottom-left--large {
+  border-bottom-left-radius: 6px !important;
+}
+
+.u-border-radius-bottom-left--x-large {
+  border-bottom-left-radius: 8px !important;
+}
+
+.u-border-radius-bottom-left--xx-large {
+  border-bottom-left-radius: 10px !important;
+}
+
+/* `border-bottom-right-radius`
+   ========================================================================== */
+.u-border-radius-bottom-right--0 {
+  border-bottom-right-radius: 0 !important;
+}
+
+.u-border-radius-bottom-right--small {
+  border-bottom-right-radius: 2px !important;
+}
+
+.u-border-radius-bottom-right--default {
+  border-bottom-right-radius: 4px !important;
+}
+
+.u-border-radius-bottom-right--large {
+  border-bottom-right-radius: 6px !important;
+}
+
+.u-border-radius-bottom-right--x-large {
+  border-bottom-right-radius: 8px !important;
+}
+
+.u-border-radius-bottom-right--xx-large {
+  border-bottom-right-radius: 10px !important;
+}
+
+/* `border-top-left-radius`
+   ========================================================================== */
+.u-border-radius-top-left--0 {
+  border-top-left-radius: 0 !important;
+}
+
+.u-border-radius-top-left--small {
+  border-top-left-radius: 2px !important;
+}
+
+.u-border-radius-top-left--default {
+  border-top-left-radius: 4px !important;
+}
+
+.u-border-radius-top-left--large {
+  border-top-left-radius: 6px !important;
+}
+
+.u-border-radius-top-left--x-large {
+  border-top-left-radius: 8px !important;
+}
+
+.u-border-radius-top-left--xx-large {
+  border-top-left-radius: 10px !important;
+}
+
+/* `border-top-right-radius`
+   ========================================================================== */
+.u-border-radius-top-right--0 {
+  border-top-right-radius: 0 !important;
+}
+
+.u-border-radius-top-right--small {
+  border-top-right-radius: 2px !important;
+}
+
+.u-border-radius-top-right--default {
+  border-top-right-radius: 4px !important;
+}
+
+.u-border-radius-top-right--large {
+  border-top-right-radius: 6px !important;
+}
+
+.u-border-radius-top-right--x-large {
+  border-top-right-radius: 8px !important;
+}
+
+.u-border-radius-top-right--xx-large {
+  border-top-right-radius: 10px !important;
+}
+
+/* `box-shadow`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/box-shadow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `box-sizing`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/box-sizing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+.u-box-sizing--border-box {
+  box-sizing: border-box !important;
+}
+
+.u-box-sizing--content-box {
+  box-sizing: content-box !important;
+}
+
+/* `clear`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/clear/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+.u-clear--both {
+  clear: both !important;
+}
+
+.u-clear--left {
+  clear: left !important;
+}
+
+.u-clear--right {
+  clear: right !important;
+}
+
+/* `display`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/display/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--block {
+  display: block !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--block {
+    display: block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--block {
+    display: block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--block {
+    display: block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--block {
+    display: block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--block {
+    display: block !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--inline {
+  display: inline !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--inline {
+    display: inline !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--inline {
+    display: inline !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--inline {
+    display: inline !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--inline {
+    display: inline !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--inline {
+    display: inline !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--inline-block {
+  display: inline-block !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--inline-block {
+    display: inline-block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--inline-block {
+    display: inline-block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--inline-block {
+    display: inline-block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--inline-block {
+    display: inline-block !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--inline-block {
+    display: inline-block !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--none {
+  display: none !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--none {
+    display: none !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--none {
+    display: none !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--none {
+    display: none !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--none {
+    display: none !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--none {
+    display: none !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--table {
+  display: table !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--table {
+    display: table !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--table {
+    display: table !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--table {
+    display: table !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--table {
+    display: table !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--table {
+    display: table !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--table-cell {
+  display: table-cell !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--table-cell {
+    display: table-cell !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--table-cell {
+    display: table-cell !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--table-cell {
+    display: table-cell !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--table-cell {
+    display: table-cell !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--table-cell {
+    display: table-cell !important;
+  }
+}
+/**
+ * Generate `display` classes without breakpoints
+ */
+.u-display--table-row {
+  display: table-row !important;
+}
+
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-display--table-row {
+    display: table-row !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-display--table-row {
+    display: table-row !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-display--table-row {
+    display: table-row !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-display--table-row {
+    display: table-row !important;
+  }
+}
+/**
+ * Generate `display` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-display--table-row {
+    display: table-row !important;
+  }
+}
+/* `align-content`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-align-content/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-align-content--center {
+  -webkit-align-content: center !important;
+  align-content: center !important;
+  -ms-flex-line-pack: center !important;
+}
+
+.u-flex-align-content--flex-end {
+  -webkit-align-content: flex-end !important;
+  align-content: flex-end !important;
+  -ms-flex-line-pack: end !important;
+}
+
+.u-flex-align-content--flex-start {
+  -webkit-align-content: flex-start !important;
+  align-content: flex-start !important;
+  -ms-flex-line-pack: start !important;
+}
+
+.u-flex-align-content--space-around {
+  -webkit-align-content: space-around !important;
+  align-content: space-around !important;
+  -ms-flex-line-pack: space-around !important;
+}
+
+.u-flex-align-content--space-between {
+  -webkit-align-content: space-between !important;
+  align-content: space-between !important;
+  -ms-flex-line-pack: space-between !important;
+}
+
+.u-flex-align-content--stretch {
+  -webkit-align-content: stretch !important;
+  align-content: stretch !important;
+  -ms-flex-line-pack: stretch !important;
+}
+
+/* `align-items`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-align-items/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-align-items--baseline {
+  -webkit-box-align: baseline !important;
+  -ms-flex-align: baseline !important;
+  -webkit-align-items: baseline !important;
+  -moz-align-items: baseline !important;
+  -ms-grid-row-align: baseline !important;
+      align-items: baseline !important;
+}
+
+.u-flex-align-items--center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  -webkit-align-items: center !important;
+  -moz-align-items: center !important;
+  -ms-grid-row-align: center !important;
+      align-items: center !important;
+}
+
+.u-flex-align-items--flex-end {
+  -webkit-box-align: flex-end !important;
+  -ms-flex-align: flex-end !important;
+  -webkit-align-items: flex-end !important;
+  -moz-align-items: flex-end !important;
+  -ms-grid-row-align: flex-end !important;
+      align-items: flex-end !important;
+}
+
+.u-flex-align-items--flex-start {
+  -webkit-box-align: flex-start !important;
+  -ms-flex-align: flex-start !important;
+  -webkit-align-items: flex-start !important;
+  -moz-align-items: flex-start !important;
+  -ms-grid-row-align: flex-start !important;
+      align-items: flex-start !important;
+}
+
+.u-flex-align-items--stretch {
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  -webkit-align-items: stretch !important;
+  -moz-align-items: stretch !important;
+  -ms-grid-row-align: stretch !important;
+      align-items: stretch !important;
+}
+
+/* `align-self`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-align-self/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-align-self--auto {
+  -webkit-align-self: auto !important;
+  align-self: auto !important;
+  -ms-flex-item-align: auto !important;
+}
+
+.u-flex-align-self--baseline {
+  -webkit-align-self: baseline !important;
+  align-self: baseline !important;
+  -ms-flex-item-align: baseline !important;
+}
+
+.u-flex-align-self--center {
+  -webkit-align-self: center !important;
+  align-self: center !important;
+  -ms-flex-item-align: center !important;
+}
+
+.u-flex-align-self--flex-end {
+  -webkit-align-self: flex-end !important;
+  align-self: flex-end !important;
+  -ms-flex-item-align: end !important;
+}
+
+.u-flex-align-self--flex-start {
+  -webkit-align-self: flex-start !important;
+  align-self: flex-start !important;
+  -ms-flex-item-align: start !important;
+}
+
+.u-flex-align-self--stretch {
+  -webkit-align-self: stretch !important;
+  align-self: stretch !important;
+  -ms-flex-item-align: stretch !important;
+}
+
+/* `flex-basis`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-basis/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-basis--auto {
+  -webkit-flex-basis: auto !important;
+  -ms-flex-preferred-size: auto !important;
+  flex-basis: auto !important;
+}
+
+.u-flex-basis--0 {
+  -webkit-flex-basis: 0 !important;
+  -ms-flex-preferred-size: 0 !important;
+  flex-basis: 0 !important;
+}
+
+.u-flex-basis--20percent {
+  -webkit-flex-basis: 20% !important;
+  -ms-flex-preferred-size: 20% !important;
+  flex-basis: 20% !important;
+}
+
+.u-flex-basis--25percent {
+  -webkit-flex-basis: 25% !important;
+  -ms-flex-preferred-size: 25% !important;
+  flex-basis: 25% !important;
+}
+
+.u-flex-basis--third {
+  -webkit-flex-basis: 33.3333333333% !important;
+  -ms-flex-preferred-size: 33.3333333333% !important;
+  flex-basis: 33.3333333333% !important;
+}
+
+.u-flex-basis--40percent {
+  -webkit-flex-basis: 40% !important;
+  -ms-flex-preferred-size: 40% !important;
+  flex-basis: 40% !important;
+}
+
+.u-flex-basis--50percent {
+  -webkit-flex-basis: 50% !important;
+  -ms-flex-preferred-size: 50% !important;
+  flex-basis: 50% !important;
+}
+
+.u-flex-basis--60percent {
+  -webkit-flex-basis: 60% !important;
+  -ms-flex-preferred-size: 60% !important;
+  flex-basis: 60% !important;
+}
+
+.u-flex-basis--two-thirds {
+  -webkit-flex-basis: 66.6666666667% !important;
+  -ms-flex-preferred-size: 66.6666666667% !important;
+  flex-basis: 66.6666666667% !important;
+}
+
+.u-flex-basis--75percent {
+  -webkit-flex-basis: 75% !important;
+  -ms-flex-preferred-size: 75% !important;
+  flex-basis: 75% !important;
+}
+
+.u-flex-basis--80percent {
+  -webkit-flex-basis: 80% !important;
+  -ms-flex-preferred-size: 80% !important;
+  flex-basis: 80% !important;
+}
+
+.u-flex-basis--100percent {
+  -webkit-flex-basis: 100% !important;
+  -ms-flex-preferred-size: 100% !important;
+  flex-basis: 100% !important;
+}
+
+/* `flex-direction`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-direction/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-direction--column {
+  -webkit-box-direction: normal !important;
+  -webkit-box-orient: vertical !important;
+  -moz-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.u-flex-direction--column-reverse {
+  -webkit-box-direction: reverse !important;
+  -webkit-box-orient: vertical !important;
+  -moz-flex-direction: column-reverse !important;
+  -ms-flex-direction: column-reverse !important;
+  -webkit-flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
+}
+
+.u-flex-direction--row {
+  -webkit-box-direction: normal !important;
+  -webkit-box-orient: horizontal !important;
+  -moz-flex-direction: row !important;
+  -ms-flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  flex-direction: row !important;
+}
+
+.u-flex-direction--row-reverse {
+  -webkit-box-direction: reverse !important;
+  -webkit-box-orient: horizontal !important;
+  -moz-flex-direction: row-reverse !important;
+  -ms-flex-direction: row-reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+}
+
+/* `flex-flow`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-flow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `flex-grow`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-grow/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-grow--0 {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex-grow: 0 !important;
+  -moz-flex-grow: 0 !important;
+  -ms-flex-positive: 0 !important;
+  flex-grow: 0 !important;
+}
+
+.u-flex-grow--1 {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex-grow: 1 !important;
+  -moz-flex-grow: 1 !important;
+  -ms-flex-positive: 1 !important;
+  flex-grow: 1 !important;
+}
+
+.u-flex-grow--2 {
+  -webkit-box-flex: 2 !important;
+  -webkit-flex-grow: 2 !important;
+  -moz-flex-grow: 2 !important;
+  -ms-flex-positive: 2 !important;
+  flex-grow: 2 !important;
+}
+
+.u-flex-grow--3 {
+  -webkit-box-flex: 3 !important;
+  -webkit-flex-grow: 3 !important;
+  -moz-flex-grow: 3 !important;
+  -ms-flex-positive: 3 !important;
+  flex-grow: 3 !important;
+}
+
+.u-flex-grow--4 {
+  -webkit-box-flex: 4 !important;
+  -webkit-flex-grow: 4 !important;
+  -moz-flex-grow: 4 !important;
+  -ms-flex-positive: 4 !important;
+  flex-grow: 4 !important;
+}
+
+.u-flex-grow--5 {
+  -webkit-box-flex: 5 !important;
+  -webkit-flex-grow: 5 !important;
+  -moz-flex-grow: 5 !important;
+  -ms-flex-positive: 5 !important;
+  flex-grow: 5 !important;
+}
+
+.u-flex-grow--6 {
+  -webkit-box-flex: 6 !important;
+  -webkit-flex-grow: 6 !important;
+  -moz-flex-grow: 6 !important;
+  -ms-flex-positive: 6 !important;
+  flex-grow: 6 !important;
+}
+
+.u-flex-grow--7 {
+  -webkit-box-flex: 7 !important;
+  -webkit-flex-grow: 7 !important;
+  -moz-flex-grow: 7 !important;
+  -ms-flex-positive: 7 !important;
+  flex-grow: 7 !important;
+}
+
+.u-flex-grow--8 {
+  -webkit-box-flex: 8 !important;
+  -webkit-flex-grow: 8 !important;
+  -moz-flex-grow: 8 !important;
+  -ms-flex-positive: 8 !important;
+  flex-grow: 8 !important;
+}
+
+.u-flex-grow--9 {
+  -webkit-box-flex: 9 !important;
+  -webkit-flex-grow: 9 !important;
+  -moz-flex-grow: 9 !important;
+  -ms-flex-positive: 9 !important;
+  flex-grow: 9 !important;
+}
+
+.u-flex-grow--10 {
+  -webkit-box-flex: 10 !important;
+  -webkit-flex-grow: 10 !important;
+  -moz-flex-grow: 10 !important;
+  -ms-flex-positive: 10 !important;
+  flex-grow: 10 !important;
+}
+
+/* `justify-content`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-justify-content/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-justify-content--center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  -moz-justify-content: center !important;
+  -webkit-justify-content: center !important;
+  justify-content: center !important;
+}
+
+.u-flex-justify-content--flex-end {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  -moz-justify-content: flex-end !important;
+  -webkit-justify-content: flex-end !important;
+  justify-content: flex-end !important;
+}
+
+.u-flex-justify-content--flex-start {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  -moz-justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.u-flex-justify-content--space-around {
+  -ms-flex-pack: distribute !important;
+  -moz-justify-content: space-around !important;
+  -webkit-justify-content: space-around !important;
+  justify-content: space-around !important;
+}
+
+.u-flex-justify-content--space-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  -moz-justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+  justify-content: space-between !important;
+}
+
+/* `order`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-order/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `flex-shrink`
+   ========================================================================== */
+/**
+  * Docs:
+  * https://fac.github.io/origin/utilities/flex-shrink/
+  *
+  * Values:
+  * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+  */
+/* Utility classes
+   ========================================================================== */
+.u-flex-shrink--0 {
+  -webkit-flex-shrink: 0 !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.u-flex-shrink--1 {
+  -webkit-flex-shrink: 1 !important;
+  -ms-flex-negative: 1 !important;
+  flex-shrink: 1 !important;
+}
+
+.u-flex-shrink--2 {
+  -webkit-flex-shrink: 2 !important;
+  -ms-flex-negative: 2 !important;
+  flex-shrink: 2 !important;
+}
+
+.u-flex-shrink--3 {
+  -webkit-flex-shrink: 3 !important;
+  -ms-flex-negative: 3 !important;
+  flex-shrink: 3 !important;
+}
+
+.u-flex-shrink--4 {
+  -webkit-flex-shrink: 4 !important;
+  -ms-flex-negative: 4 !important;
+  flex-shrink: 4 !important;
+}
+
+.u-flex-shrink--5 {
+  -webkit-flex-shrink: 5 !important;
+  -ms-flex-negative: 5 !important;
+  flex-shrink: 5 !important;
+}
+
+.u-flex-shrink--6 {
+  -webkit-flex-shrink: 6 !important;
+  -ms-flex-negative: 6 !important;
+  flex-shrink: 6 !important;
+}
+
+.u-flex-shrink--7 {
+  -webkit-flex-shrink: 7 !important;
+  -ms-flex-negative: 7 !important;
+  flex-shrink: 7 !important;
+}
+
+.u-flex-shrink--8 {
+  -webkit-flex-shrink: 8 !important;
+  -ms-flex-negative: 8 !important;
+  flex-shrink: 8 !important;
+}
+
+.u-flex-shrink--9 {
+  -webkit-flex-shrink: 9 !important;
+  -ms-flex-negative: 9 !important;
+  flex-shrink: 9 !important;
+}
+
+.u-flex-shrink--10 {
+  -webkit-flex-shrink: 10 !important;
+  -ms-flex-negative: 10 !important;
+  flex-shrink: 10 !important;
+}
+
+/* `flex-wrap`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex-wrap/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flex-wrap--nowrap {
+  -webkit-flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+}
+
+.u-flex-wrap--wrap {
+  -webkit-flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
+
+.u-flex-wrap--wrap-reverse {
+  -webkit-flex-wrap: wrap-reverse !important;
+  -ms-flex-wrap: wrap-reverse !important;
+      flex-wrap: wrap-reverse !important;
+}
+
+/* `flex`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flex/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `flexbox`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/flexbox/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.u-inline-flexbox {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -moz-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+/* `float`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/float/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/**
+ * Generate `float` classes without breakpoints
+ */
+.u-float--left {
+  float: left !important;
+}
+
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-float--left {
+    float: left !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-float--left {
+    float: left !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-float--left {
+    float: left !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-float--left {
+    float: left !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-float--left {
+    float: left !important;
+  }
+}
+/**
+ * Generate `float` classes without breakpoints
+ */
+.u-float--none {
+  float: none !important;
+}
+
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-float--none {
+    float: none !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-float--none {
+    float: none !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-float--none {
+    float: none !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-float--none {
+    float: none !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-float--none {
+    float: none !important;
+  }
+}
+/**
+ * Generate `float` classes without breakpoints
+ */
+.u-float--right {
+  float: right !important;
+}
+
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-float--right {
+    float: right !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-float--right {
+    float: right !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-float--right {
+    float: right !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-float--right {
+    float: right !important;
+  }
+}
+/**
+ * Generate `float` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-float--right {
+    float: right !important;
+  }
+}
+/* Float container
+   ========================================================================== */
+/**
+ * Make an element expand to contain floated children.
+ * Uses pseudo-elements (micro clearfix).
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of the
+ *    element.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ *
+ * Example usage:
+ * `@include floatContainer;`
+ */
+.u-floatContainer::before,
+.u-floatContainer::after {
+  /* 1 */
+  content: " ";
+  /* 2 */
+  display: table;
+}
+
+.u-floatContainer::after {
+  clear: both;
+}
+
+/* `font-family`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/font-family/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-font-family--default {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+
+.u-font-family--editorial {
+  font-family: "effra", "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+
+.u-font-family--handwritten {
+  font-family: "swister", "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+
+.u-font-family--monospace {
+  font-family: "Monaco", "Courier New", Courier, monospace !important;
+}
+
+.u-font-family--legacy {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+}
+
+/* `font-size`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/font-size/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Function to convert `px` to `rem` */
+/* Utility classes
+   ========================================================================== */
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--xx-small {
+  font-size: 11px !important;
+  font-size: 0.6875rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--xx-small {
+    font-size: 11 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--xx-small {
+    font-size: 11 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--xx-small {
+    font-size: 11 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--xx-small {
+    font-size: 11 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--xx-small {
+    font-size: 11 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--x-small {
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--x-small {
+    font-size: 12 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--x-small {
+    font-size: 12 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--x-small {
+    font-size: 12 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--x-small {
+    font-size: 12 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--x-small {
+    font-size: 12 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--small {
+  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--small {
+    font-size: 14 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--small {
+    font-size: 14 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--small {
+    font-size: 14 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--small {
+    font-size: 14 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--small {
+    font-size: 14 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--default {
+  font-size: 16px !important;
+  font-size: 1rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--default {
+    font-size: 16 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--default {
+    font-size: 16 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--default {
+    font-size: 16 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--default {
+    font-size: 16 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--default {
+    font-size: 16 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--large {
+  font-size: 18px !important;
+  font-size: 1.125rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--large {
+    font-size: 18 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--large {
+    font-size: 18 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--large {
+    font-size: 18 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--large {
+    font-size: 18 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--large {
+    font-size: 18 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--x-large {
+  font-size: 21px !important;
+  font-size: 1.3125rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--x-large {
+    font-size: 21 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--x-large {
+    font-size: 21 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--x-large {
+    font-size: 21 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--x-large {
+    font-size: 21 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--x-large {
+    font-size: 21 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of `font-size`
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-font-size--xx-large {
+  font-size: 28px !important;
+  font-size: 1.75rem !important;
+}
+
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-font-size--xx-large {
+    font-size: 28 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-font-size--xx-large {
+    font-size: 28 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-font-size--xx-large {
+    font-size: 28 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-font-size--xx-large {
+    font-size: 28 !important;
+  }
+}
+/**
+ * Generate standard scale of `font-size` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-font-size--xx-large {
+    font-size: 28 !important;
+  }
+}
+/* `font-weight`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/font-weight/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-font-weight--thin {
+  font-weight: 100 !important;
+}
+
+.u-font-weight--x-light {
+  font-weight: 200 !important;
+}
+
+.u-font-weight--light {
+  font-weight: 300 !important;
+}
+
+.u-font-weight--normal {
+  font-weight: 400 !important;
+}
+
+.u-font-weight--medium {
+  font-weight: 500 !important;
+}
+
+.u-font-weight--semi-bold {
+  font-weight: 600 !important;
+}
+
+.u-font-weight--bold {
+  font-weight: 700 !important;
+}
+
+.u-font-weight--x-bold {
+  font-weight: 800 !important;
+}
+
+.u-font-weight--black {
+  font-weight: 900 !important;
+}
+
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/height-and-width/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `height`
+   ========================================================================== */
+.u-height--100percent {
+  height: 100% !important;
+}
+
+.u-height--100viewport {
+  height: 100vh !important;
+}
+
+/* `max-width`
+   ========================================================================== */
+.u-max-width--0 {
+  max-width: 0 !important;
+}
+
+.u-max-width--none {
+  max-width: none !important;
+}
+
+.u-max-width--100percent {
+  max-width: 100% !important;
+}
+
+.u-max-width--100viewport {
+  max-width: 100vw !important;
+}
+
+/* `min-height`
+   ========================================================================== */
+.u-min-height--0 {
+  min-height: 0 !important;
+}
+
+.u-min-height--100percent {
+  min-height: 100% !important;
+}
+
+/* `width`
+   ========================================================================== */
+.u-width--0 {
+  width: 0 !important;
+}
+
+.u-width--half {
+  width: 50% !important;
+}
+
+.u-width--quarter {
+  width: 25% !important;
+}
+
+.u-width--third {
+  width: 33.3333333333% !important;
+}
+
+.u-width--three-quarters {
+  width: 75% !important;
+}
+
+.u-width--two-thirds {
+  width: 66.6666666667% !important;
+}
+
+.u-width--100percent {
+  width: 100% !important;
+}
+
+.u-width--100viewport {
+  width: 100vw !important;
+}
+
+/* Interaction
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/interaction/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `pointer-events`
+   ========================================================================== */
+.u-pointer-events--auto {
+  pointer-events: auto !important;
+}
+
+.u-pointer-events--none {
+  pointer-events: none !important;
+}
+
+/* `tap-highlight`
+   ========================================================================== */
+.u-tap-highlight--none {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* `user-select`
+   ========================================================================== */
+.u-user-select--none {
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+
+.u-user-select--text {
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Keyframe animation
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/keyframe-animation/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* `keyframes`
+   ========================================================================== */
+/* `animation`
+   ========================================================================== */
+/* `letter-spacing`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/letter-spacing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+.u-letter-spacing--0 {
+  letter-spacing: 0 !important;
+}
+
+.u-letter-spacing--normal {
+  letter-spacing: normal !important;
+}
+
+.u-letter-spacing--inherit {
+  letter-spacing: inherit !important;
+}
+
+/* `line-height`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/line-height/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--xx-tight {
+  line-height: 110% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--xx-tight {
+    line-height: 110% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--xx-tight {
+    line-height: 110% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--xx-tight {
+    line-height: 110% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--xx-tight {
+    line-height: 110% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--xx-tight {
+    line-height: 110% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--x-tight {
+  line-height: 120% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--x-tight {
+    line-height: 120% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--x-tight {
+    line-height: 120% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--x-tight {
+    line-height: 120% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--x-tight {
+    line-height: 120% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--x-tight {
+    line-height: 120% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--tight {
+  line-height: 130% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--tight {
+    line-height: 130% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--tight {
+    line-height: 130% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--tight {
+    line-height: 130% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--tight {
+    line-height: 130% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--tight {
+    line-height: 130% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--default {
+  line-height: 140% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--default {
+    line-height: 140% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--default {
+    line-height: 140% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--default {
+    line-height: 140% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--default {
+    line-height: 140% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--default {
+    line-height: 140% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--loose {
+  line-height: 145% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--loose {
+    line-height: 145% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--loose {
+    line-height: 145% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--loose {
+    line-height: 145% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--loose {
+    line-height: 145% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--loose {
+    line-height: 145% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--x-loose {
+  line-height: 150% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--x-loose {
+    line-height: 150% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--x-loose {
+    line-height: 150% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--x-loose {
+    line-height: 150% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--x-loose {
+    line-height: 150% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--x-loose {
+    line-height: 150% !important;
+  }
+}
+/**
+ * Generate `line-height` classes without breakpoints
+ */
+.u-line-height--xx-loose {
+  line-height: 155% !important;
+}
+
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-line-height--xx-loose {
+    line-height: 155% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-line-height--xx-loose {
+    line-height: 155% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-line-height--xx-loose {
+    line-height: 155% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-line-height--xx-loose {
+    line-height: 155% !important;
+  }
+}
+/**
+ * Generate `line-height` classes with breakpoints
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-line-height--xx-loose {
+    line-height: 155% !important;
+  }
+}
+/* Linear gradient
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/linear-gradient/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Linear positions parser
+   ========================================================================== */
+/**
+* Lifted directly from:
+* https://github.com/wolvesio/meteor-bourbon/blob/master/bourbon/helpers/_linear-positions-parser.scss
+*
+* This whole block is required for the linear gradient mixin below to work.
+*/
+/* `linear-gradient`
+  ========================================================================== */
+/**
+ * Lifted directly from http://bourbon.io/docs/#linear-gradient
+ */
+/* List item spacing
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/list-item-spacing/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Utility classes
+   ========================================================================== */
+.u-list-item-spacing--0 li {
+  margin-bottom: 0 !important;
+}
+
+.u-list-item-spacing--1 li {
+  margin-bottom: 0.15 !important;
+}
+
+.u-list-item-spacing--2 li {
+  margin-bottom: 0.25 !important;
+}
+
+.u-list-item-spacing--3 li {
+  margin-bottom: 0.5 !important;
+}
+
+.u-list-item-spacing--4 li {
+  margin-bottom: 0.75 !important;
+}
+
+.u-list-item-spacing--5 li {
+  margin-bottom: 1 !important;
+}
+
+.u-list-item-spacing--tight li {
+  margin-bottom: 0 !important;
+}
+
+.u-list-item-spacing--default li {
+  margin-bottom: 0.15 !important;
+}
+
+.u-list-item-spacing--loose li {
+  margin-bottom: 0.25 !important;
+}
+
+.u-list-item-spacing--x-loose li {
+  margin-bottom: 0.5 !important;
+}
+
+.u-list-item-spacing--xx-loose li {
+  margin-bottom: 0.75 !important;
+}
+
+/* `list-style`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/list-style/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+.u-list-style--decimal {
+  list-style: decimal !important;
+}
+
+.u-list-style--decimal-inside {
+  list-style: decimal inside !important;
+}
+
+.u-list-style--decimal-outside {
+  list-style: decimal outside !important;
+}
+
+.u-list-style--disc {
+  list-style: disc !important;
+}
+
+.u-list-style--disc-inside {
+  list-style: disc inside !important;
+}
+
+.u-list-style--disc-outside {
+  list-style: disc outside !important;
+}
+
+.u-list-style--lower-alpha {
+  list-style: lower-alpha !important;
+}
+
+.u-list-style--lower-alpha-inside {
+  list-style: lower-alpha inside !important;
+}
+
+.u-list-style--lower-alpha-outside {
+  list-style: lower-alpha outside !important;
+}
+
+.u-list-style--none {
+  list-style: none !important;
+}
+
+.u-list-style--upper-alpha {
+  list-style: upper-alpha !important;
+}
+
+.u-list-style--upper-alpha-inside {
+  list-style: upper-alpha inside !important;
+}
+
+.u-list-style--upper-alpha-outside {
+  list-style: upper-alpha outside !important;
+}
+
+/* `margin`
+   ========================================================================== */
+/**
+ * Docs:
+ * https://fac.github.io/origin/utilities/margin/
+ *
+ * Values:
+ * https://github.com/fac/origin/tree/master/assets/scss/global/utilities/_utility-values.scss
+ */
+/* Function to convert rem to px */
+/* Utility classes
+   ========================================================================== */
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--none {
+  margin: 0px !important;
+  margin: 0rem !important;
+}
+
+.u-margin-bottom--none {
+  margin-bottom: 0px !important;
+  margin-bottom: 0rem !important;
+}
+
+.u-margin-left--none {
+  margin-left: 0px !important;
+  margin-left: 0rem !important;
+}
+
+.u-margin-right--none {
+  margin-right: 0px !important;
+  margin-right: 0rem !important;
+}
+
+.u-margin-top--none {
+  margin-top: 0px !important;
+  margin-top: 0rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--none {
+    margin: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--none {
+    margin-bottom: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--none {
+    margin-left: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--none {
+    margin-right: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--none {
+    margin-top: 0 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--none {
+    margin: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--none {
+    margin-bottom: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--none {
+    margin-left: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--none {
+    margin-right: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--none {
+    margin-top: 0 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--none {
+    margin: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--none {
+    margin-bottom: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--none {
+    margin-left: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--none {
+    margin-right: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--none {
+    margin-top: 0 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--none {
+    margin: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--none {
+    margin-bottom: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--none {
+    margin-left: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--none {
+    margin-right: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--none {
+    margin-top: 0 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--none {
+    margin: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--none {
+    margin-bottom: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--none {
+    margin-left: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--none {
+    margin-right: 0 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--none {
+    margin-top: 0 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--xx-small {
+  margin: 2.4px !important;
+  margin: 0.15rem !important;
+}
+
+.u-margin-bottom--xx-small {
+  margin-bottom: 2.4px !important;
+  margin-bottom: 0.15rem !important;
+}
+
+.u-margin-left--xx-small {
+  margin-left: 2.4px !important;
+  margin-left: 0.15rem !important;
+}
+
+.u-margin-right--xx-small {
+  margin-right: 2.4px !important;
+  margin-right: 0.15rem !important;
+}
+
+.u-margin-top--xx-small {
+  margin-top: 2.4px !important;
+  margin-top: 0.15rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--xx-small {
+    margin: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--xx-small {
+    margin-bottom: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--xx-small {
+    margin-left: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--xx-small {
+    margin-right: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--xx-small {
+    margin-top: 0.15 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--xx-small {
+    margin: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--xx-small {
+    margin-bottom: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--xx-small {
+    margin-left: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--xx-small {
+    margin-right: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--xx-small {
+    margin-top: 0.15 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--xx-small {
+    margin: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--xx-small {
+    margin-bottom: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--xx-small {
+    margin-left: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--xx-small {
+    margin-right: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--xx-small {
+    margin-top: 0.15 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--xx-small {
+    margin: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--xx-small {
+    margin-bottom: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--xx-small {
+    margin-left: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--xx-small {
+    margin-right: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--xx-small {
+    margin-top: 0.15 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--xx-small {
+    margin: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--xx-small {
+    margin-bottom: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--xx-small {
+    margin-left: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--xx-small {
+    margin-right: 0.15 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--xx-small {
+    margin-top: 0.15 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--x-small {
+  margin: 4px !important;
+  margin: 0.25rem !important;
+}
+
+.u-margin-bottom--x-small {
+  margin-bottom: 4px !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.u-margin-left--x-small {
+  margin-left: 4px !important;
+  margin-left: 0.25rem !important;
+}
+
+.u-margin-right--x-small {
+  margin-right: 4px !important;
+  margin-right: 0.25rem !important;
+}
+
+.u-margin-top--x-small {
+  margin-top: 4px !important;
+  margin-top: 0.25rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--x-small {
+    margin: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--x-small {
+    margin-bottom: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--x-small {
+    margin-left: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--x-small {
+    margin-right: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--x-small {
+    margin-top: 0.25 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--x-small {
+    margin: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--x-small {
+    margin-bottom: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--x-small {
+    margin-left: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--x-small {
+    margin-right: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--x-small {
+    margin-top: 0.25 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--x-small {
+    margin: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--x-small {
+    margin-bottom: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--x-small {
+    margin-left: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--x-small {
+    margin-right: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--x-small {
+    margin-top: 0.25 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--x-small {
+    margin: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--x-small {
+    margin-bottom: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--x-small {
+    margin-left: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--x-small {
+    margin-right: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--x-small {
+    margin-top: 0.25 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--x-small {
+    margin: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--x-small {
+    margin-bottom: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--x-small {
+    margin-left: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--x-small {
+    margin-right: 0.25 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--x-small {
+    margin-top: 0.25 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--small {
+  margin: 8px !important;
+  margin: 0.5rem !important;
+}
+
+.u-margin-bottom--small {
+  margin-bottom: 8px !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.u-margin-left--small {
+  margin-left: 8px !important;
+  margin-left: 0.5rem !important;
+}
+
+.u-margin-right--small {
+  margin-right: 8px !important;
+  margin-right: 0.5rem !important;
+}
+
+.u-margin-top--small {
+  margin-top: 8px !important;
+  margin-top: 0.5rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--small {
+    margin: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--small {
+    margin-bottom: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--small {
+    margin-left: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--small {
+    margin-right: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--small {
+    margin-top: 0.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--small {
+    margin: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--small {
+    margin-bottom: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--small {
+    margin-left: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--small {
+    margin-right: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--small {
+    margin-top: 0.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--small {
+    margin: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--small {
+    margin-bottom: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--small {
+    margin-left: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--small {
+    margin-right: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--small {
+    margin-top: 0.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--small {
+    margin: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--small {
+    margin-bottom: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--small {
+    margin-left: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--small {
+    margin-right: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--small {
+    margin-top: 0.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--small {
+    margin: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--small {
+    margin-bottom: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--small {
+    margin-left: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--small {
+    margin-right: 0.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--small {
+    margin-top: 0.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--default {
+  margin: 16px !important;
+  margin: 1rem !important;
+}
+
+.u-margin-bottom--default {
+  margin-bottom: 16px !important;
+  margin-bottom: 1rem !important;
+}
+
+.u-margin-left--default {
+  margin-left: 16px !important;
+  margin-left: 1rem !important;
+}
+
+.u-margin-right--default {
+  margin-right: 16px !important;
+  margin-right: 1rem !important;
+}
+
+.u-margin-top--default {
+  margin-top: 16px !important;
+  margin-top: 1rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--default {
+    margin: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--default {
+    margin-bottom: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--default {
+    margin-left: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--default {
+    margin-right: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--default {
+    margin-top: 1 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--default {
+    margin: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--default {
+    margin-bottom: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--default {
+    margin-left: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--default {
+    margin-right: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--default {
+    margin-top: 1 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--default {
+    margin: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--default {
+    margin-bottom: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--default {
+    margin-left: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--default {
+    margin-right: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--default {
+    margin-top: 1 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--default {
+    margin: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--default {
+    margin-bottom: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--default {
+    margin-left: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--default {
+    margin-right: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--default {
+    margin-top: 1 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--default {
+    margin: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--default {
+    margin-bottom: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--default {
+    margin-left: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--default {
+    margin-right: 1 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--default {
+    margin-top: 1 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--large {
+  margin: 24px !important;
+  margin: 1.5rem !important;
+}
+
+.u-margin-bottom--large {
+  margin-bottom: 24px !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-left--large {
+  margin-left: 24px !important;
+  margin-left: 1.5rem !important;
+}
+
+.u-margin-right--large {
+  margin-right: 24px !important;
+  margin-right: 1.5rem !important;
+}
+
+.u-margin-top--large {
+  margin-top: 24px !important;
+  margin-top: 1.5rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--large {
+    margin: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--large {
+    margin-bottom: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--large {
+    margin-left: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--large {
+    margin-right: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--large {
+    margin-top: 1.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--large {
+    margin: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--large {
+    margin-bottom: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--large {
+    margin-left: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--large {
+    margin-right: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--large {
+    margin-top: 1.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--large {
+    margin: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--large {
+    margin-bottom: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--large {
+    margin-left: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--large {
+    margin-right: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-top--large {
+    margin-top: 1.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin--large {
+    margin: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-bottom--large {
+    margin-bottom: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-left--large {
+    margin-left: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-right--large {
+    margin-right: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 76rem) {
+  .u-x-lg-margin-top--large {
+    margin-top: 1.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin--large {
+    margin: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-bottom--large {
+    margin-bottom: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-left--large {
+    margin-left: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-right--large {
+    margin-right: 1.5 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 92rem) {
+  .u-xx-lg-margin-top--large {
+    margin-top: 1.5 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes without breakpoints
+ *
+ * Note that classes will not be generated for the full scale of spacing
+ * values, only the standard `xx-small` > `xx-large` scale, because in
+ * practice the full scale has never been needed.
+ */
+.u-margin--x-large {
+  margin: 32px !important;
+  margin: 2rem !important;
+}
+
+.u-margin-bottom--x-large {
+  margin-bottom: 32px !important;
+  margin-bottom: 2rem !important;
+}
+
+.u-margin-left--x-large {
+  margin-left: 32px !important;
+  margin-left: 2rem !important;
+}
+
+.u-margin-right--x-large {
+  margin-right: 32px !important;
+  margin-right: 2rem !important;
+}
+
+.u-margin-top--x-large {
+  margin-top: 32px !important;
+  margin-top: 2rem !important;
+}
+
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin--x-large {
+    margin: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-bottom--x-large {
+    margin-bottom: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-left--x-large {
+    margin-left: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-right--x-large {
+    margin-right: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 0) {
+  .u-sm-margin-top--x-large {
+    margin-top: 2 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin--x-large {
+    margin: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-bottom--x-large {
+    margin-bottom: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-left--x-large {
+    margin-left: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-right--x-large {
+    margin-right: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 44rem) {
+  .u-md-margin-top--x-large {
+    margin-top: 2 !important;
+  }
+}
+/**
+ * Generate standard scale of spacing classes with breakpoints
+ *
+ * These don't have IE8 fallbacks because IE8 ignores media
+ * queries anyway.
+ */
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin--x-large {
+    margin: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-bottom--x-large {
+    margin-bottom: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-left--x-large {
+    margin-left: 2 !important;
+  }
+}
+/* Output mixin content inside a media query */
+@media (min-width: 60rem) {
+  .u-lg-margin-right--x-large {
+    margin-right: 2 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
